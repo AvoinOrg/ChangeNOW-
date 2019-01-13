@@ -1,0 +1,28 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    .text-primary {
+    	color: #009688 !important;
+    }
+    </style>
+    <title>Prototype</title>
+</head>
+<body>
+	<nav class="navbar navbar-dark text-primary">
+		<a class="navbar-brand">ChangeNOW</a>
+	</nav>
+	<hr>
+    <form action="/prototype/account/" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
